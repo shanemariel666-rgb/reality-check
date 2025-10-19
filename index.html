@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reality Check</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e90ff, #00bfff);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+    button {
+      background: white;
+      color: #1e90ff;
+      border: none;
+      padding: 15px 25px;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    button:hover {
+      background: #f0f0f0;
+    }
+    p {
+      margin-top: 20px;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧠 Reality Check</h1>
+  <button id="runCheck">Run Reality Check</button>
+  <p id="result"></p>
+
+  <script>
+    document.getElementById('runCheck').addEventListener('click', () => {
+      const phrases = [
+        "You're dreaming — look for clues.",
+        "Everything seems real, but double-check.",
+        "Ask yourself: Is this logical?",
+        "Notice details — are they consistent?",
+        "Take a deep breath. You are aware now."
+      ];
+      const random = phrases[Math.floor(Math.random() * phrases.length)];
+      document.getElementById('result').innerText = random;
+    });
+  </script>
+</body>
+</html>
